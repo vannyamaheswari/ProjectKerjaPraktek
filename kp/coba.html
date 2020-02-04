@@ -36,13 +36,27 @@ hr {
 </head>
 
 <body class="bg-light">
-  <div class="container">
+  <!-- Navigation -->
+  <a class="menu-toggle rounded" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a class="js-scroll-trigger" >Menu</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="js-scroll-trigger" href="index.html">Beranda</a>
+      </li>
+  </nav>
+
+  <div class="container" id="page-top">
     <div class="py-5 text-center">
       <h2>Bank Jateng e-form Pembukaan Rekening</h2>
     </div>
   </div>
   <!-- Form -->
-<div class="col-md-8 order-md-1">
+<div class="col-lg-10 mx-auto">
       <form class="needs-validation" novalidate>
         <div class="mb-3">
           <label for="nik">Nomor Induk KTP</label>
