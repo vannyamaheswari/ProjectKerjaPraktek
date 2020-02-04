@@ -43,18 +43,27 @@ hr {
   </div>
   <!-- Form -->
 <div class="col-md-8 order-md-1">
-      <h4 class="mb-3">Billing address</h4>
       <form class="needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="nik">Nomor Induk KTP</label>
+          <div class="input-group">
+            <input type="text" class="form-control" id="nik" placeholder="NIK, 16 digit" required>
+            <div class="invalid-feedback" style="width: 100%;">
+              NIK wajib diisi.
+            </div>
+          </div>
+        </div>
+
         <div class="row">
           <div class="col-md-6 mb-3">
-            <label for="firstName">First name</label>
+            <label for="firstName">Nama Depan</label>
             <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
             <div class="invalid-feedback">
               Valid first name is required.
             </div>
           </div>
           <div class="col-md-6 mb-3">
-            <label for="lastName">Last name</label>
+            <label for="lastName">Nama Belakang</label>
             <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
             <div class="invalid-feedback">
               Valid last name is required.
@@ -63,38 +72,68 @@ hr {
         </div>
 
         <div class="mb-3">
-          <label for="username">Username</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">@</span>
-            </div>
-            <input type="text" class="form-control" id="username" placeholder="Username" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Your username is required.
-            </div>
+          <label for="address">Alamat</label>
+          <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+          <div class="invalid-feedback">
+            Alamat harap diisi.
           </div>
         </div>
-
+        
         <div class="mb-3">
           <label for="email">Email <span class="text-muted">(Optional)</span></label>
           <input type="email" class="form-control" id="email" placeholder="you@example.com">
           <div class="invalid-feedback">
-            Please enter a valid email address for shipping updates.
+            email harap diisi.
+          </div>
+        
+        <div class="row">
+          <div class="col-md-2 mb-3">
+            <label for="firstName">Nomor Telp Rumah</label>
+            <input type="text" class="form-control" id="noRum" placeholder="Kode Area" value="" required>
+            <div class="invalid-feedback">
+              Nomor telpon harap diisi.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="firstName">-</label>
+            <input type="text" class="form-control" id="noRum" placeholder="nomor telp" value="" required>
+            <div class="invalid-feedback">
+               Nomor telpon harap diisi.
+            </div>
           </div>
         </div>
 
         <div class="mb-3">
-          <label for="address">Address</label>
-          <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+          <label for="address">Nomor Handphone</label>
+          <input type="text" class="form-control" id="noHp" placeholder="" required>
           <div class="invalid-feedback">
-            Please enter your shipping address.
+            Nomor Hp harap diisi.
           </div>
         </div>
 
         <div class="mb-3">
-          <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
-          <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+          <label for="address">Nomor NPWP</label>
+          <input type="text" class="form-control" id="noNPWP" placeholder="15 digit" required>
+          <div class="invalid-feedback">
+            harap diisi.
+          </div>
         </div>
+
+         <div class="form-group bukaRekening" style="">
+      <label for="BR_jenisPenghasilan">Penghasilan per bulan</label>
+      <select class="form-control mandatory" id="BR_jenisPenghasilan">
+        <option value="">Pilih Penghasilan (wajib)</option>
+        <option value="2000000">1: &lt; Rp 3 juta</option>
+        <option value="4000000">2: 3 juta &lt; 5 juta</option>
+        <option value="8000000">3: 5 juta &lt; Rp 10 juta</option>
+        <option value="15000000">4: 10 juta &lt; 20 juta</option>
+        <option value="44000000">5: 20 juta &lt; 50 juta</option>
+        <option value="88000000">6: 50 juta &lt; 100 juta</option>
+        <option value="325000000">7: 100 juta &lt; 500 juta</option>
+        <option value="755000000">8: &gt;= 500 juta</option>
+      </select>
+      </div>
+      <div class="alert alert-danger" style="margin-top: 10px; display: none;" id="BR_jenisPenghasilanAlert">Jenis Penghasilan wajib di pilih</div>
 
         <div class="row">
           <div class="col-md-5 mb-3">
@@ -125,17 +164,8 @@ hr {
             </div>
           </div>
         </div>
-        <hr class="mb-4">
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="same-address">
-          <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
-        </div>
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="save-info">
-          <label class="custom-control-label" for="save-info">Save this information for next time</label>
-        </div>
-        <hr class="mb-4">
 
+        <hr class="mb-4">
         <h4 class="mb-3">Payment</h4>
 
         <div class="d-block my-3">
@@ -186,7 +216,7 @@ hr {
           </div>
         </div>
         <hr class="mb-4">
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Daftar</button>
       </form>
     </div>
   </div>
