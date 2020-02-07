@@ -391,7 +391,18 @@ a:hover, a:focus, a:active {
 .bg-pdark {
   background-color: #142080 !important;
 }
-
+.bg-blue{
+  background-color: #00386c !important;
+}
+.bg-red{
+  background-color: #ed1c24 !important;
+}
+.bg-yellow{
+  background-color: #febd11 !important;
+}
+.text-yellow{
+  color: #febd11 !important;
+}
 .text-primary {
   color: #1D809F !important;
 }
