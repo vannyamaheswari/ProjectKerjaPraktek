@@ -58,26 +58,74 @@ hr {
   <!-- Form -->
     <div class="col-lg-10 mx-auto">
       <form class="needs-validation" novalidate>
-        <div class="mb-3">
-          <label for="nik">Nomor Induk KTP</label>
+          <div class="mb-3">
+            <label for="nama_Lembaga">Nama Yayasan/Organisasi</label>
+            <input type="text" class="form-control" id="nama_Lembaga" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+
+          <div class="mb-3">
+          <label for="bidang">Bidang Usaha/Kegiatan</label>
           <div class="input-group">
-            <input type="text" class="form-control" id="nik" placeholder="NIK, 16 digit" required>
+            <input type="text" class="form-control" id="bidang" placeholder="" required>
             <div class="invalid-feedback" style="width: 100%;">
               NIK wajib diisi.
             </div>
           </div>
         </div>
 
-          <div class="mb-3">
-            <label for="firstName">Nama Lengkap</label>
-            <input type="text" class="form-control" id="Name" placeholder="" value="" required>
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <label for="tempat">Tempat & Tanggal Pendirian</label>
+            <input type="text" class="form-control" id="tempat" placeholder="Tempat Lahir" value="" required>
             <div class="invalid-feedback">
-              Valid first name is required.
+              Valid ttl is required.
             </div>
           </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-1 mb-3">
+            <label for="tgl_berdiri">Tanggal</label>
+            <input type="text" class="form-control" id="tgl_berdiri" placeholder="" required>
+            <div class="invalid-feedback">
+              Please select a valid tgl.
+            </div>
+          </div>
+          <div class="col-md-1 mb-3">
+            <label for="bln_berdiri">Bulan</label>
+            <input type="text" class="form-control" id="bln_berdiri" placeholder="" required>
+            <div class="invalid-feedback">
+              Please provide a valid bln.
+            </div>
+          </div>
+          <div class="col-md-1 mb-3">
+            <label for="thn_berdiri">Tahun</label>
+            <input type="text" class="form-control" id="thn_berdiri" placeholder="" required>
+            <div class="invalid-feedback">
+              tahun required.
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <label for="bentuk_usaha">Bentuk Badan Usaha</label>
+            <select class="custom-select d-block w-100" id="bentuk_usaha" required>
+              <option value="">Pilih</option>
+              <option>Yayasan</option>
+              <option>Perkumpulan/Organisasi</option>
+            </select>
+            <div class="invalid-feedback">
+              harap diisi.
+            </div>
+          </div>
+        </div>
 
         <div class="mb-3">
-          <label for="alamat">Alamat</label>
+          <label for="alamat">Alamat Yayasan/Organisasi</label>
           <input type="text" class="form-control" id="alamat" placeholder="1234 Main St" required>
           <div class="invalid-feedback">
             Alamat harap diisi.
