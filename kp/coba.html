@@ -52,7 +52,7 @@ hr {
 
   <div class="container" id="page-top">
     <div class="py-5 text-center">
-      <h2>Bank Jateng e-form Pembukaan Rekening</h2>
+      <h2>e-form Pembukaan Rekening Bima</h2>
     </div>
   </div>
   <!-- Form -->
@@ -68,22 +68,13 @@ hr {
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="firstName">Nama Depan</label>
-            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+          <div class="mb-3">
+            <label for="firstName">Nama Lengkap</label>
+            <input type="text" class="form-control" id="Name" placeholder="" value="" required>
             <div class="invalid-feedback">
               Valid first name is required.
             </div>
           </div>
-          <div class="col-md-6 mb-3">
-            <label for="lastName">Nama Belakang</label>
-            <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-            <div class="invalid-feedback">
-              Valid last name is required.
-            </div>
-          </div>
-        </div>
 
         <div class="mb-3">
           <label for="address">Alamat</label>
@@ -93,6 +84,98 @@ hr {
           </div>
         </div>
         
+         <div class="row">
+          <div class="col-md-1 mb-3">
+            <label for="country">RT</label>
+            <input type="text" class="form-control" id="address" placeholder="" required>
+            <div class="invalid-feedback">
+              Please select a valid RT.
+            </div>
+          </div>
+          <div class="col-md-1 mb-3">
+            <label for="state">RW</label>
+            <input type="text" class="form-control" id="address" placeholder="" required>
+            <div class="invalid-feedback">
+              Please provide a valid RW.
+            </div>
+          </div>
+          <div class="col-md-2 mb-3">
+            <label for="zip">Kode Pos</label>
+            <input type="text" class="form-control" id="zip" placeholder="" required>
+            <div class="invalid-feedback">
+              Zip code required.
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <label for="firstName">Desa/Kelurahan</label>
+            <input type="text" class="form-control" id="kelurahan" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Valid kelurahan is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="lastName">Kecamatan</label>
+            <input type="text" class="form-control" id="kecamatan" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Valid kecamatan is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <label for="firstName">Kabupaten/Kota</label>
+            <input type="text" class="form-control" id="kota" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Valid kota is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="lastName">Provinsi</label>
+            <input type="text" class="form-control" id="provinsi" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Valid provinsi is required.
+            </div>
+          </div>
+        </div>
+
+         <div class="row">
+          <div class="col-md-3 mb-3">
+            <label for="firstName">Tempat & Tanggal Lahir</label>
+            <input type="text" class="form-control" id="tempat" placeholder="Tempat Lahir" value="" required>
+            <div class="invalid-feedback">
+              Valid ttl is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-1 mb-3">
+            <label for="country">Tanggal</label>
+            <input type="text" class="form-control" id="tgl" placeholder="" required>
+            <div class="invalid-feedback">
+              Please select a valid tgl.
+            </div>
+          </div>
+          <div class="col-md-1 mb-3">
+            <label for="state">Bulan</label>
+            <input type="text" class="form-control" id="bln" placeholder="" required>
+            <div class="invalid-feedback">
+              Please provide a valid bln.
+            </div>
+          </div>
+          <div class="col-md-1 mb-3">
+            <label for="zip">Tahun</label>
+            <input type="text" class="form-control" id="thn" placeholder="" required>
+            <div class="invalid-feedback">
+              tahun required.
+            </div>
+          </div>
+        </div>
+
         <div class="mb-3">
           <label for="email">Email <span class="text-muted">(Optional)</span></label>
           <input type="email" class="form-control" id="email" placeholder="you@example.com">
@@ -133,6 +216,135 @@ hr {
           </div>
         </div>
 
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <label for="kewarganegaraan">Kewarganegaraan</label>
+            <select class="custom-select d-block w-100" id="kewarganegaraan" required>
+              <option value="">Pilih</option>
+              <option>WNI</option>
+              <option>WNA</option>
+            </select>
+            <div class="invalid-feedback">
+              harap diisi.
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-2 mb-3">
+            <label for="country">Jenis Kelamin</label>
+            <select class="custom-select d-block w-100" id="jen_kel" required>
+              <option value="">Pilih</option>
+              <option>Pria</option>
+              <option>Wanita</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid gender.
+            </div>
+          </div>
+          <div class="col-md-2 mb-3">
+            <label for="state">Status</label>
+            <select class="custom-select d-block w-100" id="status" required>
+              <option value="">Pilih</option>
+              <option>Kawin</option>
+              <option>Belum Kawin</option>
+            </select>
+            <div class="invalid-feedback">
+              Please provide a valid status.
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <label for="agama">Agama</label>
+            <select class="custom-select d-block w-100" id="agama" required>
+              <option value="">Pilih</option>
+              <option>Islam</option>
+              <option>Kristen</option>
+              <option>Katolik</option>
+              <option>Hindu</option>
+              <option>Budha</option>
+              <option>Lainnya</option>
+            </select>
+            <div class="invalid-feedback">
+              harap diisi.
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <label for="pendidikan">Pendidikan Terakhir</label>
+            <select class="custom-select d-block w-100" id="pendidikan" required>
+              <option value="">Pilih</option>
+              <option>S3</option>
+              <option>S2</option>
+              <option>S1</option>
+              <option>SMA/Sederajat</option>
+              <option>SMP/Sederajat</option>
+              <option>SD/Sederajat</option>
+              <option>Lainnya</option>
+            </select>
+            <div class="invalid-feedback">
+              harap diisi.
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <label for="pekerjaan">Pekerjaan</label>
+            <select class="custom-select d-block w-100" id="pekerjaan" required>
+              <option value="">Pilih</option>
+              <option>PNS</option>
+              <option>TNI/Polri</option>
+              <option>Pegawai Swasta</option>
+              <option>Wiraswasta</option>
+              <option>Pensiunan</option>
+              <option>BUMN/BUMD</option>
+              <option>Lainnya</option>
+            </select>
+            <div class="invalid-feedback">
+              harap diisi.
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+        <div class="col-md-5 mb-3">
+            <label for="kantor">Nama Kantor</label>
+            <input type="text" class="form-control" id="kantor" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+        <div class="col-md-5 mb-3">
+            <label for="jabatan">Jabatan</label>
+            <input type="text" class="form-control" id="jabatan" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="al_kantor">Alamat Kantor</label>
+          <input type="text" class="form-control" id="al_kantor" placeholder="1234 Main St" required>
+          <div class="invalid-feedback">
+            Alamat harap diisi.
+          </div>
+        </div>
+
+       <div class="mb-3">
+          <label for="tel_kantor">Nomor Telepon Kantor</label>
+          <input type="text" class="form-control" id="tel_kantor" placeholder="" required>
+          <div class="invalid-feedback">
+            Nomor Hp harap diisi.
+          </div>
+        </div>
+
+
          <div class="form-group bukaRekening" style="">
       <label for="BR_jenisPenghasilan">Penghasilan per bulan</label>
       <select class="form-control mandatory" id="BR_jenisPenghasilan">
@@ -149,35 +361,6 @@ hr {
       </div>
       <div class="alert alert-danger" style="margin-top: 10px; display: none;" id="BR_jenisPenghasilanAlert">Jenis Penghasilan wajib di pilih</div>
 
-        <div class="row">
-          <div class="col-md-5 mb-3">
-            <label for="country">Country</label>
-            <select class="custom-select d-block w-100" id="country" required>
-              <option value="">Choose...</option>
-              <option>United States</option>
-            </select>
-            <div class="invalid-feedback">
-              Please select a valid country.
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <label for="state">State</label>
-            <select class="custom-select d-block w-100" id="state" required>
-              <option value="">Choose...</option>
-              <option>California</option>
-            </select>
-            <div class="invalid-feedback">
-              Please provide a valid state.
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="zip">Zip</label>
-            <input type="text" class="form-control" id="zip" placeholder="" required>
-            <div class="invalid-feedback">
-              Zip code required.
-            </div>
-          </div>
-        </div>
 <!--  
         <hr class="mb-4">
         <h4 class="mb-3">Payment</h4>
