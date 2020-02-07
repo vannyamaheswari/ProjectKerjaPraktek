@@ -403,6 +403,12 @@ a:hover, a:focus, a:active {
 .text-yellow{
   color: #febd11 !important;
 }
+.text-blue{
+  color: #00386c !important;
+}
+.text-red{
+  color: #ed1c24 !important;
+}
 .text-primary {
   color: #1D809F !important;
 }
