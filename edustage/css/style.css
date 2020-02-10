@@ -1578,9 +1578,19 @@ button:focus {
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*============== contact_area css ================*/
-.mapBox {
-  height: 420px;
-  margin-bottom: 80px; }
+.map {
+  height: 30rem;
+}
+
+@media (max-width: 992px) {
+  .map {
+    height: 75%;
+  }
+}
+
+.map iframe {
+  pointer-events: none;
+}
 
 .contact_info .info_item {
   position: relative;
