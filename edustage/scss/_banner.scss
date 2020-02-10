@@ -3,13 +3,13 @@
 
 .home_banner_area {
   z-index: 1;
-  min-height: 900px;
+  min-height: 800px;
   position: relative;
   background: url(../img/banner/bg-masthead.jpg) no-repeat center;
   background-size: cover;
   .banner_inner {
     position: absolute;
-    top: 40%;
+    top: 50%;
     @include transform(translateY(-50%));
     z-index: 10;
     width: 100%;
