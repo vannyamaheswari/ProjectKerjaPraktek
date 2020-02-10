@@ -28,6 +28,10 @@
 		die('Connection Failed : '.$conn->connect_error);
 	}
 	else{
-		$stmt = $conn->prepare("insert into registration(nik,firstName,alamat,RT,RW,zip,kelurahan,kecamatan,kota,provinsi,tempat,tgl_lahir,bln_lahir,thn_lahir,email,noRum,noHp,nama_kantor,alm_kantor,jabatan,tel_kantor,jenis_Penghasilan)");
+		$stmt = $conn->prepare("insert into registration(nik,firstName,alamat,RT,RW,zip,kelurahan,kecamatan,kota,provinsi,tempat,tgl_lahir,bln_lahir,thn_lahir,email,noRum,noHp,nama_kantor,alm_kantor,jabatan,tel_kantor,jenis_Penghasilan) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?)");
+		$stmt->bind_param("issiiisssssssssiisiii",$nik, $firstName, $alamat, $RT, $RW, $zip, $kelurahan, $kecamatan, $kota, $provinsi, $tempat, $tgl_lahir, $bln_lahir, $thn_lahir, $email, $noRum, $noHp, $nama_kantor, $jabatan, $alm_kantor, $tel_kantor, $jenis_Penghasilan);
+		echo "registration successfully";
+		$stmt->close();
+		$conn->close();
 	}
 ?>
