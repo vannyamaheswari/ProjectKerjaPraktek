@@ -3368,7 +3368,11 @@ h6 {
         .footer-area .footer-bottom .footer-social {
           text-align: left;
           margin-top: 20px; } }
-
+.container2{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
 
 }
 /*---------------------------------------------------- */
