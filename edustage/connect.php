@@ -23,7 +23,7 @@
 	$jenis_Penghasilan = $_POST['jenis_Penghasilan'];
 
 	//database connection
-	$conn = new mysqli('localhost','root','','form_bimaPersonal');
+	$conn = new mysqli('localhost','root','','form_bimapersonal');
 	if($conn->connect_error){
 		die('Connection Failed : '.$conn->connect_error);
 	}
