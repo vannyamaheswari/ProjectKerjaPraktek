@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="icon" href="img/favicon.png" type="image/png" />
-    <title>EFORM-LEMBAGA</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css" />
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="icon" href="img/logo.png" type="image/png" />
+  <title>EFORM-INDIVIDUAL</title>
+
+  <!-- Bootstrap Core CSS -->
+   <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/themify-icons.css" />
     <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css" />
     <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css" />
-    <!-- main css -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
-    <!--================ Start Header Menu Area =================-->
-    <header class="header_area white-header">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css"/>
+<!--style line-->
+  <style>
+hr { 
+  display: block;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+} 
+</style>
+
+</head>
+
+<body class="bg-light">
+  <header class="header_area white-header">
       <div class="main_menu">
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container">
@@ -78,25 +93,20 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                      <a class="nav-link" href="komunitas.html">Komunitas</a>
-                </li>
+                      <a class="nav-link" href="komunitas.html"
+                        >Komunitas</a
+                      >
+                    </li>
                 <li class="nav-item">
                   <a class="nav-link" href="contact.html">Hubungi Kami</a>
                 </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link search" id="search">
-                    <i class="ti-search"></i>
-                  </a>
-                </li>
+                
               </ul>
             </div>
           </div>
         </nav>
       </div>
     </header>
-    <!--================ End Header Menu Area =================-->
-
-    <!--================Home Banner Area =================-->
     <section class="banner_area">
       <div class="banner_inner d-flex align-items-center">
         <div class="overlay"></div>
@@ -104,96 +114,43 @@
           <div class="row justify-content-center">
             <div class="col-lg-6">
               <div class="banner_content text-center">
-                <h2>e-form Pembukaan Rekening Bima</h2>
-                <div class="page_link">
-                  <p>Lembaga</p>
+                <h2>e-form Pembukaan Rekening Bima Platinum</h2>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!--================End Home Banner Area =================-->
-
-    <!--================ Start Popular Courses Area =================-->
 
   <div class="container" id="page-top">
     <div class="py-5 text-center">
-     
+      
     </div>
   </div>
   <!-- Form -->
     <div class="col-lg-10 mx-auto">
-      <form class="needs-validation" novalidate action="connect.php" method="post">
-          <div class="mb-3">
-            <label for="nama_Lembaga">Nama Yayasan/Organisasi</label>
-            <input type="text" class="form-control" id="nama_Lembaga" placeholder="" value="" required>
-            <div class="invalid-feedback">
-              Valid first name is required.
-            </div>
-          </div>
-
-          <div class="mb-3">
-          <label for="bidang">Bidang Usaha/Kegiatan</label>
+      <form action="connect.php" method="post">
+        <div class="mb-3">
+          <label for="nik">Nomor Induk KTP</label>
           <div class="input-group">
-            <input type="text" class="form-control" id="bidang" placeholder="" required>
+            <input type="text" class="form-control" id="nik" name="nik" placeholder="NIK, 16 digit" required>
             <div class="invalid-feedback" style="width: 100%;">
               NIK wajib diisi.
             </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-3 mb-3">
-            <label for="tempat">Tempat & Tanggal Pendirian</label>
-            <input type="text" class="form-control" id="tempat" placeholder="Tempat Lahir" value="" required>
+          <div class="mb-3">
+            <label for="firstName">Nama Lengkap</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="" required>
             <div class="invalid-feedback">
-              Valid ttl is required.
+              Valid first name is required.
             </div>
           </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-1 mb-3">
-            <label for="tgl_berdiri">Tanggal</label>
-            <input type="text" class="form-control" id="tgl_berdiri" placeholder="" required>
-            <div class="invalid-feedback">
-              Please select a valid tgl.
-            </div>
-          </div>
-          <div class="col-md-1 mb-3">
-            <label for="bln_berdiri">Bulan</label>
-            <input type="text" class="form-control" id="bln_berdiri" placeholder="" required>
-            <div class="invalid-feedback">
-              Please provide a valid bln.
-            </div>
-          </div>
-          <div class="col-md-1 mb-3">
-            <label for="thn_berdiri">Tahun</label>
-            <input type="text" class="form-control" id="thn_berdiri" placeholder="" required>
-            <div class="invalid-feedback">
-              tahun required.
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-3 mb-3">
-            <label for="bentuk_usaha">Bentuk Badan Usaha</label>
-            <select class="custom-select d-block w-100" id="bentuk_usaha" required>
-              <option value="">Pilih</option>
-              <option>Yayasan</option>
-              <option>Perkumpulan/Organisasi</option>
-            </select>
-            <div class="invalid-feedback">
-              harap diisi.
-            </div>
-          </div>
-        </div>
 
         <div class="mb-3">
-          <label for="alamat">Alamat Yayasan/Organisasi</label>
-          <input type="text" class="form-control" id="alamat" placeholder="1234 Main St" required>
+          <label for="alamat">Alamat</label>
+          <input type="text" class="form-control" id="alamat" name="alamat" placeholder="1234 Main St" required>
           <div class="invalid-feedback">
             Alamat harap diisi.
           </div>
@@ -202,21 +159,21 @@
          <div class="row">
           <div class="col-md-1 mb-3">
             <label for="RT">RT</label>
-            <input type="text" class="form-control" id="RT" placeholder="" required>
+            <input type="text" class="form-control" id="RT" name="RT" placeholder="" required>
             <div class="invalid-feedback">
               Please select a valid RT.
             </div>
           </div>
           <div class="col-md-1 mb-3">
             <label for="RW">RW</label>
-            <input type="text" class="form-control" id="RW" placeholder="" required>
+            <input type="text" class="form-control" id="RW" name="RW" placeholder="" required>
             <div class="invalid-feedback">
               Please provide a valid RW.
             </div>
           </div>
           <div class="col-md-2 mb-3">
             <label for="zip">Kode Pos</label>
-            <input type="text" class="form-control" id="zip" placeholder="" required>
+            <input type="text" class="form-control" id="zip" name="zip" placeholder="" required>
             <div class="invalid-feedback">
               Zip code required.
             </div>
@@ -226,14 +183,14 @@
         <div class="row">
           <div class="col-md-4 mb-3">
             <label for="kelurahan">Desa/Kelurahan</label>
-            <input type="text" class="form-control" id="kelurahan" placeholder="" value="" required>
+            <input type="text" class="form-control" id="kelurahan" name="kelurahan" placeholder="" value="" required>
             <div class="invalid-feedback">
               Valid kelurahan is required.
             </div>
           </div>
           <div class="col-md-4 mb-3">
             <label for="kecamatan">Kecamatan</label>
-            <input type="text" class="form-control" id="kecamatan" placeholder="" value="" required>
+            <input type="text" class="form-control" id="kecamatan" name="kecamatan" placeholder="" value="" required>
             <div class="invalid-feedback">
               Valid kecamatan is required.
             </div>
@@ -243,64 +200,89 @@
         <div class="row">
           <div class="col-md-4 mb-3">
             <label for="kota">Kabupaten/Kota</label>
-            <input type="text" class="form-control" id="kota" placeholder="" value="" required>
+            <input type="text" class="form-control" id="kota" name="kota" placeholder="" value="" required>
             <div class="invalid-feedback">
               Valid kota is required.
             </div>
           </div>
           <div class="col-md-4 mb-3">
             <label for="provinsi">Provinsi</label>
-            <input type="text" class="form-control" id="provinsi" placeholder="" value="" required>
+            <input type="text" class="form-control" id="provinsi" name="provinsi" placeholder="" value="" required>
             <div class="invalid-feedback">
               Valid provinsi is required.
             </div>
           </div>
         </div>
 
+         <div class="row">
+          <div class="col-md-3 mb-3">
+            <label for="tempat">Tempat & Tanggal Lahir</label>
+            <input type="text" class="form-control" id="tempat" name="tempat" placeholder="Tempat Lahir" value="" required>
+            <div class="invalid-feedback">
+              Valid ttl is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-1 mb-3">
+            <label for="tgl_lahir">Tanggal</label>
+            <input type="text" class="form-control" id="tgl_lahir" name="tgl_lahir" placeholder="" required>
+            <div class="invalid-feedback">
+              Please select a valid tgl.
+            </div>
+          </div>
+          <div class="col-md-1 mb-3">
+            <label for="bln_lahir">Bulan</label>
+            <input type="text" class="form-control" id="bln_lahir" name="bln_lahir" placeholder="" required>
+            <div class="invalid-feedback">
+              Please provide a valid bln.
+            </div>
+          </div>
+          <div class="col-md-1 mb-3">
+            <label for="thn_lahir">Tahun</label>
+            <input type="text" class="form-control" id="thn_lahir" name="thn_lahir" placeholder="" required>
+            <div class="invalid-feedback">
+              tahun required.
+            </div>
+          </div>
+        </div>
+
         <div class="mb-3">
           <label for="email">Email <span class="text-muted">(Optional)</span></label>
-          <input type="email" class="form-control" id="email" placeholder="you@example.com">
+          <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com">
           <div class="invalid-feedback">
             email harap diisi.
           </div>
         
         <div class="row">
           <div class="col-md-2 mb-3">
-            <label for="noTelp">Nomor Telp Badan</label>
-            <input type="text" class="form-control" id="noTelp" placeholder="Kode Area" value="" required>
+            <label for="noRum">Nomor Telp Rumah</label>
+            <input type="text" class="form-control" id="noRum" name="noRum" placeholder="Kode Area" value="" required>
             <div class="invalid-feedback">
               Nomor telpon harap diisi.
             </div>
           </div>
           <div class="col-md-6 mb-3">
-            <label for="noTelp">-</label>
-            <input type="text" class="form-control" id="noTelp" placeholder="nomor telp" value="" required>
+            <label for="noRum">-</label>
+            <input type="text" class="form-control" id="noRum" name="noRum" placeholder="nomor telp" value="" required>
             <div class="invalid-feedback">
                Nomor telpon harap diisi.
             </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-2 mb-3">
-            <label for="noFax">Nomor Fax Badan</label>
-            <input type="text" class="form-control" id="noFax" placeholder="Kode Area" value="" required>
-            <div class="invalid-feedback">
-              Nomor telpon harap diisi.
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="noFax">-</label>
-            <input type="text" class="form-control" id="noFax" placeholder="nomor telp" value="" required>
-            <div class="invalid-feedback">
-               Nomor telpon harap diisi.
-            </div>
+        <div class="mb-3">
+          <label for="noHp">Nomor Handphone</label>
+          <input type="text" class="form-control" id="noHp" name="noHp" placeholder="" required>
+          <div class="invalid-feedback">
+            Nomor Hp harap diisi.
           </div>
         </div>
-        
+
         <div class="mb-3">
           <label for="noNPWP">Nomor NPWP</label>
-          <input type="text" class="form-control" id="noNPWP" placeholder="15 digit" required>
+          <input type="text" class="form-control" id="noNPWP" name="noNPWP" placeholder="15 digit" required>
           <div class="invalid-feedback">
             harap diisi.
           </div>
@@ -309,7 +291,7 @@
         <div class="row">
           <div class="col-md-3 mb-3">
             <label for="kewarganegaraan">Kewarganegaraan</label>
-            <select class="custom-select d-block w-100" id="kewarganegaraan" required>
+            <select class="custom-select d-block w-100" id="kewarganegaraan" name="kewarganegaraan" required>
               <option value="">Pilih</option>
               <option>WNI</option>
               <option>WNA</option>
@@ -323,7 +305,7 @@
         <div class="row">
           <div class="col-md-2 mb-3">
             <label for="jen_kel">Jenis Kelamin</label>
-            <select class="custom-select d-block w-100" id="jen_kel" required>
+            <select class="custom-select d-block w-100" id="jen_kel" name="kewarganegaraan" required>
               <option value="">Pilih</option>
               <option>Pria</option>
               <option>Wanita</option>
@@ -334,7 +316,7 @@
           </div>
           <div class="col-md-2 mb-3">
             <label for="status">Status</label>
-            <select class="custom-select d-block w-100" id="status" required>
+            <select class="custom-select d-block w-100" id="status" name="status" required>
               <option value="">Pilih</option>
               <option>Kawin</option>
               <option>Belum Kawin</option>
@@ -348,7 +330,7 @@
         <div class="row">
           <div class="col-md-3 mb-3">
             <label for="agama">Agama</label>
-            <select class="custom-select d-block w-100" id="agama" required>
+            <select class="custom-select d-block w-100" id="agama" name="agama" required>
               <option value="">Pilih</option>
               <option>Islam</option>
               <option>Kristen</option>
@@ -366,7 +348,7 @@
         <div class="row">
           <div class="col-md-3 mb-3">
             <label for="pendidikan">Pendidikan Terakhir</label>
-            <select class="custom-select d-block w-100" id="pendidikan" required>
+            <select class="custom-select d-block w-100" id="pendidikan" name="pendidikan" required>
               <option value="">Pilih</option>
               <option>S3</option>
               <option>S2</option>
@@ -385,7 +367,7 @@
         <div class="row">
           <div class="col-md-3 mb-3">
             <label for="pekerjaan">Pekerjaan</label>
-            <select class="custom-select d-block w-100" id="pekerjaan" required>
+            <select class="custom-select d-block w-100" id="pekerjaan" name="pekerjaan" required>
               <option value="">Pilih</option>
               <option>PNS</option>
               <option>TNI/Polri</option>
@@ -403,15 +385,15 @@
 
         <div class="row">
         <div class="col-md-5 mb-3">
-            <label for="kantor">Nama Kantor</label>
-            <input type="text" class="form-control" id="kantor" placeholder="" value="" required>
+            <label for="nama_kantor">Nama Kantor</label>
+            <input type="text" class="form-control" id="nama_kantor" name="nama_kantor" placeholder="" value="" required>
             <div class="invalid-feedback">
               Valid first name is required.
             </div>
           </div>
         <div class="col-md-5 mb-3">
             <label for="jabatan">Jabatan</label>
-            <input type="text" class="form-control" id="jabatan" placeholder="" value="" required>
+            <input type="text" class="form-control" id="jabatan" name="jabatan" placeholder="" value="" required>
             <div class="invalid-feedback">
               Valid first name is required.
             </div>
@@ -420,7 +402,7 @@
 
         <div class="mb-3">
           <label for="alm_kantor">Alamat Kantor</label>
-          <input type="text" class="form-control" id="alm_kantor" placeholder="1234 Main St" required>
+          <input type="text" class="form-control" id="alm_kantor" name="alm_kantor" placeholder="1234 Main St" required>
           <div class="invalid-feedback">
             Alamat harap diisi.
           </div>
@@ -428,7 +410,7 @@
 
        <div class="mb-3">
           <label for="tel_kantor">Nomor Telepon Kantor</label>
-          <input type="text" class="form-control" id="tel_kantor" placeholder="" required>
+          <input type="text" class="form-control" id="tel_kantor" name="tel_kantor" placeholder="" required>
           <div class="invalid-feedback">
             Nomor Hp harap diisi.
           </div>
@@ -437,7 +419,7 @@
 
          <div class="form-group bukaRekening" style="">
       <label for="jenis_Penghasilan">Penghasilan per bulan</label>
-      <select class="form-control mandatory" id="jenis_Penghasilan">
+      <select class="form-control mandatory" id="jenis_Penghasilan" name="jenis_Penghasilan">
         <option value="">Pilih Penghasilan (wajib)</option>
         <option value="2000000">1: &lt; Rp 3 juta</option>
         <option value="4000000">2: 3 juta - 5 juta</option>
@@ -450,7 +432,6 @@
       </select>
       </div>
       <div class="alert alert-danger" style="margin-top: 10px; display: none;" id="jenis_PenghasilanAlert">Jenis Penghasilan wajib di pilih</div>
-  <!--================ End Popular Courses Area =================-->
 
 <!--  
         <hr class="mb-4">
@@ -505,12 +486,12 @@
         </div>
           -->
         <hr class="mb-4">
-        <button class="primary-btn" type="submit">Daftar</button>
+        <button class="primary-btn" type="submit" value="submit">Daftar</button>
       </form>
     </div>
   </div>
 
- <!--================ Start footer Area  =================-->
+<!--================ Start footer Area  =================-->
     <footer class="footer-area section_gap">
             <div class="container">
               <div class="row">
@@ -581,7 +562,11 @@
             </div>
           </footer>
           <!--================ End footer Area  =================-->
-
+          
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -592,7 +577,6 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/stylish-portfolio.min.js"></script>
-
 
 </body>
 
