@@ -2938,6 +2938,27 @@ h6 {
     color: #002347;
     border: 1px solid #002347; }
 
+.red-btn {
+  display: inline-block;
+  background: #ed1c24;
+  padding: 0px 48px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 50px;
+  border-radius: 5px;
+  outline: none !important;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s; }
+  .primary-btn:hover {
+    background: #002347;
+    color: #fdc632; }
+
 .white_bg_btn {
   background: #fff;
   display: inline-block;
