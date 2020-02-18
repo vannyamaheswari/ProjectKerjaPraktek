@@ -92,19 +92,19 @@ button:focus {
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 .section_gap {
-  padding: 130px 0; }
+  padding: 110px 0; }
   @media (max-width: 991px) {
     .section_gap {
       padding: 70px 0; } }
 
 .section_gap_top {
-  padding-top: 130px; }
+  padding-top: 50px; }
   @media (max-width: 991px) {
     .section_gap_top {
       padding-top: 70px; } }
 
 .section_gap_bottom {
-  padding-bottom: 130px; }
+  padding-bottom: 50px; }
   @media (max-width: 991px) {
     .section_gap_bottom {
       padding-bottom: 70px; } }
