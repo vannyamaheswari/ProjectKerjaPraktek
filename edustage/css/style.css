@@ -2938,6 +2938,29 @@ h6 {
     color: #002347;
     border: 1px solid #002347; }
 
+.primary-btn3 {
+  display: inline-block;
+  background: #002347;
+  padding: 0px 48px;
+  color: #fdc632;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 70px;
+  border-radius: 35px;
+  border: 1px solid transparent;
+  outline: none !important;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s; }
+  .primary-btn3:hover {
+    background: transparent;
+    color: #002347;
+    border: 1px solid #002347; }
+
 .red-btn {
   display: inline-block;
   background: #ed1c24;
