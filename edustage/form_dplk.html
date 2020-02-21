@@ -146,7 +146,7 @@ hr {
           </div>
         </div>
         
-       <h4 class="title">A. Identitas Peserta</h4>
+       <h4 class="title">1. Identitas Peserta</h4>
 <br>
         <div class="mb-3">
           <div class="mb-3">
@@ -317,6 +317,7 @@ hr {
               <div class="invalid-feedback">
                 email harap diisi.
               </div>
+
         <div class="mb-3">
           <label for="noHp">Nomor Handphone</label>
           <input type="text" class="form-control" id="noHp" name="noHp" placeholder="" required>
@@ -389,32 +390,55 @@ hr {
             </select>
             </div>
 
-        <div class="mb-3">
-            <label for="nama_kantor">Nama Perusahaan</label>
-            <input type="text" class="form-control" id="nama_kantor" name="nama_kantor">
-            <div class="invalid-feedback">
-              Valid first name is required.
-            </div>
-          </div>
-        <div class="mb-3">
-            <label for="jabatan">Iuran Pemberi Kerja</label>
-            <input type="text" class="form-control" id="iuran_kerja" name="iuran_kerja">
-            <div class="invalid-feedback">
-              Valid first name is required.
-            </div>
-          </div>
-        </div>
-
-        <div class="mb-3">
-          <label for="alm_kantor">Iuran Peserta</label>
-          <input type="text" class="form-control" id="iuran_peserta" name="iuran_peserta" placeholder="" required>
-          <div class="invalid-feedback">
-            Alamat harap diisi.
-          </div>
-        </div>
+            <h4 class="title">2. Pilihan Paket Investasi</h4>
+<br>
+        <select class="form-control mandatory" id="jenis_Penghasilan" name="jenis_Penghasilan">
+              <option value="">Pilih</option>
+              <option value="">Paket Setia Pasar Uang</option>
+              <option value="">Paket Setia Kombinasi</option>
+              <option value="">Paket Setia Pendapatan Tetap</option>
+            </select>
+            <br>
 
           Usia Pensiun Yang Dipilih
-         <div class="row">
+            <input type="text" class="form-control" id="usia_pensiun" name="usia_pensiun">
+
+        <div class="mb-3">
+            <label for="jabatan">Iuran Pemberi Kerja</label>
+            <input type="text" class="form-control" id="iuran_kerja" name="iuran_kerja" placeholder="Rp.">
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="alm_kantor">Iuran Individu/Mandiri</label>
+          <input type="text" class="form-control" id="iuran_peserta" name="iuran_peserta" placeholder="Rp." required>
+        </div>
+
+    <h4 class="title">3. Ahli Waris atau Pihak Yang Ditunjuk</h4>
+<br>
+        <div class="mb-3">
+          <div class="mb-3">
+            <label for="firstName">Nama Lengkap</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+
+          <div class="row">
+          <div class="col-md-3 mb-3">
+            <label for="tempat">Tempat & Tanggal Lahir</label>
+            <input type="text" class="form-control" id="tempat" name="tempat" placeholder="Tempat Lahir" value="" required>
+            <div class="invalid-feedback">
+              Valid ttl is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
           <div class="col-md-1 mb-3">
             <label for="tgl_lahir">Tanggal</label>
             <input type="text" class="form-control" id="tgl_lahir" name="tgl_lahir" placeholder="" required>
@@ -436,6 +460,54 @@ hr {
               tahun required.
             </div>
           </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="alamat">Alamat</label>
+          <input type="text" class="form-control" id="alamat" name="alamat" placeholder="1234 Main St" required>
+          <div class="invalid-feedback">
+            Alamat harap diisi.
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <label for="kecamatan">Kecamatan</label>
+            <input type="text" class="form-control" id="kecamatan2" name="kecamatan2" placeholder="" value="" required>
+           
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="kota2">Kota</label>
+            <input type="text" class="form-control" id="kota2" name="kecamatan" placeholder="" value="" required>
+           
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <label for="zip2">Kode Pos</label>
+            <input type="text" class="form-control" id="zip2" name="zip2" placeholder="" value="" required>
+            
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="tlp_rmh">Telpon Rumah</label>
+            <input type="text" class="form-control" id="tlp_rmh" name="tlp_rmh" placeholder="" value="" required>
+            
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="noHp">Nomor Handphone</label>
+          <input type="text" class="form-control" id="noHp" name="noHp" placeholder="" required>
+          <div class="invalid-feedback">
+            Nomor Hp harap diisi.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="hub_peserta">Hubungan dengan Peserta</label>
+          <input type="text" class="form-control" id="hub_peserta" name="hub_peserta" placeholder="" required>
+          
         </div>
 
        <div class="mb-3">
