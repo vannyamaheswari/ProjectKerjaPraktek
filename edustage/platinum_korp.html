@@ -338,6 +338,7 @@
               <option value="">Pilih</option>
               <option>Kawin</option>
               <option>Belum Kawin</option>
+              <option>Duda/Janda</option>
             </select>
             <div class="invalid-feedback">
               Please provide a valid status.
@@ -438,72 +439,17 @@
          <div class="form-group bukaRekening" style="">
       <label for="jenis_Penghasilan">Penghasilan per bulan</label>
       <select class="form-control mandatory" id="jenis_Penghasilan">
-        <option value="">Pilih Penghasilan (wajib)</option>
-        <option value="2000000">1: &lt; Rp 3 juta</option>
-        <option value="4000000">2: 3 juta - 5 juta</option>
-        <option value="8000000">3: 5 juta - Rp 10 juta</option>
-        <option value="15000000">4: 10 juta - 20 juta</option>
-        <option value="44000000">5: 20 juta - 50 juta</option>
-        <option value="88000000">6: 50 juta - 100 juta</option>
-        <option value="325000000">7: 100 juta - 500 juta</option>
-        <option value="755000000">8: &gt;= 500 juta</option>
+       <option value="">Pilih Penghasilan (wajib)</option>
+              <option value="">1: s/d 5 juta</option>
+              <option value="">2: &gt;5 juta - 10 juta</option>
+              <option value="">3: &gt;10 juta - 25 juta</option>
+              <option value="">4: &gt;25 juta - 50 juta</option>
+              <option value="">5: &gt;50 juta</option>
       </select>
       </div>
       <div class="alert alert-danger" style="margin-top: 10px; display: none;" id="jenis_PenghasilanAlert">Jenis Penghasilan wajib di pilih</div>
   <!--================ End Popular Courses Area =================-->
 
-<!--  
-        <hr class="mb-4">
-        <h4 class="mb-3">Payment</h4>
-
-        <div class="d-block my-3">
-          <div class="custom-control custom-radio">
-            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-            <label class="custom-control-label" for="credit">Credit card</label>
-          </div>
-          <div class="custom-control custom-radio">
-            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-            <label class="custom-control-label" for="debit">Debit card</label>
-          </div>
-          <div class="custom-control custom-radio">
-            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-            <label class="custom-control-label" for="paypal">PayPal</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="cc-name">Name on card</label>
-            <input type="text" class="form-control" id="cc-name" placeholder="" required>
-            <small class="text-muted">Full name as displayed on card</small>
-            <div class="invalid-feedback">
-              Name on card is required
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="cc-number">Credit card number</label>
-            <input type="text" class="form-control" id="cc-number" placeholder="" required>
-            <div class="invalid-feedback">
-              Credit card number is required
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3 mb-3">
-            <label for="cc-expiration">Expiration</label>
-            <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-            <div class="invalid-feedback">
-              Expiration date required
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="cc-cvv">CVV</label>
-            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-            <div class="invalid-feedback">
-              Security code required
-            </div>
-          </div>
-        </div>
-          -->
         <hr class="mb-4">
         <button class="primary-btn" type="submit">Daftar</button>
       </form>
