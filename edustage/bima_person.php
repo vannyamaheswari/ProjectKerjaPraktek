@@ -128,35 +128,33 @@ hr {
     </div>
   </div>
   <!-- Form -->
-    <div class="col-lg-8 mx-auto ">
-      <form action="connect.php" method="post">
-        <div class="mb-3">
-          <label for="nik">Nomor Induk KTP</label>
-          <div class="input-group">
-            <input type="text" class="form-control" id="nik" name="nik" placeholder="NIK, 16 digit" required>
-            <div class="invalid-feedback" style="width: 100%;">
+
+  <div class="container">
+    <div class="col-lg-9 mx-auto ">
+      <div class="panel-body">
+          <form action="connect.php" method="post">
+            <div class="form-group">
+              <label for="nik">Nomor Induk KTP</label>
+              <input type="text" class="form-control" id="nik" name="nik" />
+              <div class="invalid-feedback" style="width: 100%;">
               NIK wajib diisi.
+              </div>
             </div>
-          </div>
-        </div>
-
-          <div class="mb-3">
-            <label for="firstName">Nama Lengkap</label>
-            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="" required>
-            <div class="invalid-feedback">
-              Valid first name is required.
+            <div class="form-group">
+              <label for="nama">Nama Lengkap</label>
+              <input type="text" class="form-control" id="nama" name="nama" />
+              <div class="invalid-feedback" style="width: 100%;">
+              Nama harap diisi.
+              </div>
             </div>
-          </div>
-
-        <div class="mb-3">
-          <label for="alamat">Alamat</label>
-          <input type="text" class="form-control" id="alamat" name="alamat" placeholder="" required>
-          <div class="invalid-feedback">
-            Alamat harap diisi.
-          </div>
-        </div>
-        
-         <div class="row">
+            <div class="form-group">
+              <label for="alamat">Alamat</label>
+              <input type="text" class="form-control" id="alamat" name="alamat" />
+              <div class="invalid-feedback" style="width: 100%;">
+              Alamat harap diisi.
+              </div>
+            </div>
+            <div class="row">
           <div class="col-md-1 mb-3">
             <label for="RT">RT</label>
             <input type="text" class="form-control" id="RT" name="RT" placeholder="" required>
@@ -179,7 +177,6 @@ hr {
             </div>
           </div>
         </div>
-
         <div class="row">
           <div class="col-md-4 mb-3">
             <label for="kelurahan">Desa/Kelurahan</label>
@@ -213,8 +210,7 @@ hr {
             </div>
           </div>
         </div>
-
-         <div class="row">
+        <div class="row">
           <div class="col-md-3 mb-3">
             <label for="tempat">Tempat & Tanggal Lahir</label>
             <input type="text" class="form-control" id="tempat" name="tempat" placeholder="Tempat Lahir" value="" required>
@@ -223,7 +219,6 @@ hr {
             </div>
           </div>
         </div>
-
         <div class="row">
           <div class="col-md-1 mb-3">
             <label for="tgl_lahir">Tanggal</label>
@@ -239,7 +234,7 @@ hr {
               Please provide a valid bln.
             </div>
           </div>
-          <div class="col-md-1 mb-3">
+          <div class="col-md-2 mb-3">
             <label for="thn_lahir">Tahun</label>
             <input type="text" class="form-control" id="thn_lahir" name="thn_lahir" placeholder="" required>
             <div class="invalid-feedback">
@@ -247,17 +242,14 @@ hr {
             </div>
           </div>
         </div>
+        <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" class="form-control" id="email" name="email" />            
+            </div>
 
-        <div class="mb-3">
-          <label for="email">Email <span class="text-muted">(Optional)</span></label>
-          <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com">
-          <div class="invalid-feedback">
-            email harap diisi.
-          </div>
-        
-        <div class="row">
+            <div class="row">
           <div class="col-md-2 mb-3">
-            <label for="noRum">Nomor Telp Rumah</label>
+            <label for="noRum">Telp Rumah</label>
             <input type="text" class="form-control" id="noRum" name="noRum" placeholder="Kode Area" value="" required>
             <div class="invalid-feedback">
               Nomor telpon harap diisi.
@@ -272,7 +264,7 @@ hr {
           </div>
         </div>
 
-        <div class="mb-3">
+        <div class="form-group">
           <label for="noHp">Nomor Handphone</label>
           <input type="text" class="form-control" id="noHp" name="noHp" placeholder="" required>
           <div class="invalid-feedback">
@@ -280,7 +272,7 @@ hr {
           </div>
         </div>
 
-        <div class="mb-3">
+        <div class="form-group">
           <label for="noNPWP">Nomor NPWP</label>
           <input type="text" class="form-control" id="noNPWP" name="noNPWP" placeholder="15 digit" required>
           <div class="invalid-feedback">
@@ -302,35 +294,26 @@ hr {
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-2 mb-3">
-            <label for="jen_kel">Jenis Kelamin</label>
-            <select class="custom-select d-block w-100" id="jen_kel" name="kewarganegaraan" required>
-              <option value="">Pilih</option>
-              <option>Pria</option>
-              <option>Wanita</option>
-            </select>
-            <div class="invalid-feedback">
-              Please select a valid gender.
-            </div>
+        <div class="form-group">
+              <label for="email">Jenis Kelamin</label>
+              <div>
+                <label for="male" class="radio-inline"><input type="radio" name="gender" value="m" id="male"> Male</label>
+                <label for="female" class="radio-inline"><input type="radio" name="gender" value="f" id="female"> Female</label>
+                <label for="others" class="radio-inline"><input type="radio" name="gender" value="o" id="others"> Others</label>
+              </div>
           </div>
-          <div class="col-md-2 mb-3">
-            <label for="status">Status</label>
-            <select class="custom-select d-block w-100" id="status" name="status" required>
-              <option value="">Pilih</option>
-              <option>Kawin</option>
-              <option>Belum Kawin</option>
-            </select>
-            <div class="invalid-feedback">
-              Please provide a valid status.
+          <div class="form-group">
+              <label for="email">Status</label>
+              <div>
+                <label for="kawin" class="radio-inline"><input type="radio" name="status" value="kawin" id="kawin"> Menikah</label>
+                <label for="belum" class="radio-inline"><input type="radio" name="status" value="belum" id="belum"> Belum Menikah</label>
+              </div>
             </div>
-          </div>
-        </div>
 
         <div class="row">
           <div class="col-md-3 mb-3">
             <label for="agama">Agama</label>
-            <select class="custom-select d-block w-100" id="agama" name="agama" required>
+            <select class="custom-select d-block w-100" id="agama" name="agama" />
               <option value="">Pilih</option>
               <option>Islam</option>
               <option>Kristen</option>
@@ -367,7 +350,7 @@ hr {
         <div class="row">
           <div class="col-md-3 mb-3">
             <label for="pekerjaan">Pekerjaan</label>
-            <select class="custom-select d-block w-100" id="pekerjaan" name="pekerjaan" required>
+            <select class="custom-select d-block w-100" id="pekerjaan" name="pekerjaan" />
               <option value="">Pilih</option>
               <option>PNS</option>
               <option>TNI/Polri</option>
@@ -386,38 +369,38 @@ hr {
         <div class="row">
         <div class="col-md-5 mb-3">
             <label for="nama_kantor">Nama Kantor</label>
-            <input type="text" class="form-control" id="nama_kantor" name="nama_kantor" placeholder="" value="" required>
+            <input type="text" class="form-control" name="nama_kantor" id="nama_kantor" />
             <div class="invalid-feedback">
               Valid first name is required.
             </div>
           </div>
         <div class="col-md-5 mb-3">
             <label for="jabatan">Jabatan</label>
-            <input type="text" class="form-control" id="jabatan" name="jabatan" placeholder="" value="" required>
+            <input type="text" class="form-control" id="jabatan" name="jabatan"/>
             <div class="invalid-feedback">
               Valid first name is required.
             </div>
           </div>
         </div>
 
-        <div class="mb-3">
+        <div class="form-group">
           <label for="alm_kantor">Alamat Kantor</label>
-          <input type="text" class="form-control" id="alm_kantor" name="alm_kantor" placeholder="1234 Main St" required>
+          <input type="text" class="form-control" id="alm_kantor" name="alm_kantor" />
           <div class="invalid-feedback">
             Alamat harap diisi.
           </div>
         </div>
 
-       <div class="mb-3">
+       <div class="form-group">
           <label for="tel_kantor">Nomor Telepon Kantor</label>
-          <input type="text" class="form-control" id="tel_kantor" name="tel_kantor" placeholder="" required>
+          <input type="text" class="form-control" id="tel_kantor" name="tel_kantor" />
           <div class="invalid-feedback">
             Nomor Hp harap diisi.
           </div>
         </div>
 
 
-         <div class="form-group bukaRekening" style="">
+         <div class="form-group" style="">
       <label for="jenis_Penghasilan">Penghasilan per bulan</label>
       <select class="form-control mandatory" id="jenis_Penghasilan" name="jenis_Penghasilan">
         <option value="">Pilih Penghasilan (wajib)</option>
@@ -432,65 +415,13 @@ hr {
       </select>
       </div>
       <div class="alert alert-danger" style="margin-top: 10px; display: none;" id="jenis_PenghasilanAlert">Jenis Penghasilan wajib di pilih</div>
-
-<!--  
-        <hr class="mb-4">
-        <h4 class="mb-3">Payment</h4>
-
-        <div class="d-block my-3">
-          <div class="custom-control custom-radio">
-            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-            <label class="custom-control-label" for="credit">Credit card</label>
-          </div>
-          <div class="custom-control custom-radio">
-            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-            <label class="custom-control-label" for="debit">Debit card</label>
-          </div>
-          <div class="custom-control custom-radio">
-            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-            <label class="custom-control-label" for="paypal">PayPal</label>
-          </div>
+      <hr>
+      <input type="submit" class="btn btn-primary">
+          </form>
+          <br>
         </div>
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="cc-name">Name on card</label>
-            <input type="text" class="form-control" id="cc-name" placeholder="" required>
-            <small class="text-muted">Full name as displayed on card</small>
-            <div class="invalid-feedback">
-              Name on card is required
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="cc-number">Credit card number</label>
-            <input type="text" class="form-control" id="cc-number" placeholder="" required>
-            <div class="invalid-feedback">
-              Credit card number is required
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3 mb-3">
-            <label for="cc-expiration">Expiration</label>
-            <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-            <div class="invalid-feedback">
-              Expiration date required
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="cc-cvv">CVV</label>
-            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-            <div class="invalid-feedback">
-              Security code required
-            </div>
-          </div>
-        </div>
-          -->
-        <hr class="mb-4">
-        <button class="primary-btn " type="submit" value="submit">Daftar</button>
-      </form>
     </div>
   </div>
-
 <!--================ Start footer Area  =================-->
     <footer class="footer-area section_gap">
             <div class="container">
