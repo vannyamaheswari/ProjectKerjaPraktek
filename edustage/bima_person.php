@@ -106,14 +106,6 @@ hr {
         </nav>
       </div>
     </header>
-    
-
-  <div class="container" id="page-top">
-    <div class="py-5 text-center">
-      
-    </div>
-  </div>
-   <!--================Home Banner Area =================-->
     <section class="banner_area">
       <div class="banner_inner d-flex align-items-center">
         <div class="overlay"></div>
@@ -123,8 +115,8 @@ hr {
               <div class="banner_content text-center">
                 <h2>e-form Pembukaan Rekening Bima</h2>
                 <div class="page_link">
-                  <a href="menu_daftar.html">Register</a>
-                  <a href="bima_person.php">eForm Bima Personal</a>>
+                <a href="menu_daftar.html">Register</a>
+                  <a href="bima_person.php">eForm Bima Personal</a>
                 </div>
               </div>
             </div>
@@ -132,7 +124,13 @@ hr {
         </div>
       </div>
     </section>
-    <!--================End Home Banner Area =================-->
+
+  <div class="container" id="page-top">
+    <div class="py-5 text-center">
+      
+    </div>
+  </div>
+
   <!-- Form -->
 
   <div class="container">
