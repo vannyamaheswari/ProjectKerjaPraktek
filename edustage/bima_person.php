@@ -98,9 +98,8 @@ hr {
                       >
                     </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Hubungi Kami</a>
+                  <a class="nav-link" href="menu_daftar.html">Register</a>
                 </li>
-                
               </ul>
             </div>
           </div>
