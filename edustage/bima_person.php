@@ -98,9 +98,8 @@ hr {
                       >
                     </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Hubungi Kami</a>
+                  <a class="nav-link" href="menu_daftar.html">Register</a>
                 </li>
-                
               </ul>
             </div>
           </div>
@@ -115,6 +114,10 @@ hr {
             <div class="col-lg-6">
               <div class="banner_content text-center">
                 <h2>e-form Pembukaan Rekening Bima</h2>
+                <div class="page_link">
+                <a href="menu_daftar.html">Register</a>
+                  <a href="bima_person.php">eForm Bima Personal</a>
+                </div>
               </div>
             </div>
           </div>
@@ -127,6 +130,7 @@ hr {
       
     </div>
   </div>
+
   <!-- Form -->
 
   <div class="container">
