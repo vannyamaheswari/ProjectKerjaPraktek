@@ -129,7 +129,7 @@ hr {
   </div>
   <!-- Form -->
     <div class="col-lg-8 mx-auto">
-      <form action="connect5.php" method="post">
+      <form action="controller/create_dplk.php" method="post" id="form-dplk">
         <div class="row">
           <div class="col-md-3 mb-3">
             <label for="jenis">Jenis Yang dibutuhkan</label>
@@ -356,21 +356,21 @@ hr {
             <h5 class="title">A. Gaji</h5>
             <select class="form-control mandatory" id="gaji" name="gaji">
               <option value="">Pilih Penghasilan (wajib)</option>
-              <option value="">1: s/d 5 juta</option>
-              <option value="">2: &gt;5 juta - 10 juta</option>
-              <option value="">3: &gt;10 juta - 25 juta</option>
-              <option value="">4: &gt;25 juta - 50 juta</option>
-              <option value="">5: &gt;50 juta</option>
+              <option value="1">1: s/d 5 juta</option>
+              <option value="2">2: &gt;5 juta - 10 juta</option>
+              <option value="3">3: &gt;10 juta - 25 juta</option>
+              <option value="4">4: &gt;25 juta - 50 juta</option>
+              <option value="5">5: &gt;50 juta</option>
             </select>
             <br>
             <h5 class="title">B. Pendapatan Lain</h5>
             <select class="form-control mandatory" id="pendapatan_lain" name="pendapatan_lain">
               <option value="">Pilih Penghasilan (wajib)</option>
-              <option value="">1: s/d 5 juta</option>
-              <option value="">2: &gt;5 juta - 10 juta</option>
-              <option value="">3: &gt;10 juta - 25 juta</option>
-              <option value="">4: &gt;25 juta - 50 juta</option>
-              <option value="">5: &gt;50 juta</option>
+              <option value="1">1: s/d 5 juta</option>
+              <option value="2">2: &gt;5 juta - 10 juta</option>
+              <option value="3">3: &gt;10 juta - 25 juta</option>
+              <option value="4">4: &gt;25 juta - 50 juta</option>
+              <option value="5">5: &gt;50 juta</option>
             </select>
             </div>
 
@@ -773,16 +773,62 @@ hr {
     <i class="fas fa-angle-up"></i>
   </a>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script>
+    $(document).ready(function(ev){
+      $(document).on('submit','#form-dplk',function(e){
+        e.preventDefault();
+        // Get form
+        var form = $('#form-dplk')[0];
+ 
+       // Create an FormData object 
+        var postData = new FormData(form);
+ 
+        var url = $(this).attr('action');
+        console.log(postData,url);
+        $("#loading").removeClass("d-none");
+        $("#result").addClass("d-none");
+        
+        function generateHtml(data){
+          if(data.type != "success"){
+            return data.html;
+          }
+          var html = data.html + "<br/>Berhasil menambahkan<br/><br/><small>";
+          var submit = data.data;
+          html+= "Nama    : " + submit.firstName;
+          html+= "<br/>Jenis    : " + submit.jenis;
+          html+= "<br/>NIK    : " + submit.nik;
+          html+= "<br/>Email    : " + submit.email;
+          html+= "<br/>NO Hp    : " + submit.noHp;
+          html+="</small>";
+          return html;
+        }
 
-  <!-- Custom scripts for this template -->
-  <script src="js/stylish-portfolio.min.js"></script>
-
+        $.ajax({
+          type: "POST",
+          url: url,
+          data: postData,
+          dataType: "json",
+          processData: false,
+          contentType: false,
+          success: function (response) {
+            $("#modal-progress").modal("toggle");
+            $("#loading").addClass("d-none");
+            $("#result").removeClass("d-none");
+            Swal.fire({
+              "icon":response.type,
+              "title":response.title,
+              "html":generateHtml(response)
+            });
+          }
+        });
+        
+      })
+    });
+  </script>
 </body>
 
 </html>

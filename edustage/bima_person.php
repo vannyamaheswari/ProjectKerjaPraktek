@@ -36,6 +36,31 @@ hr {
 </head>
 
 <body class="bg-light">
+
+<div class="modal fade" id="modal-progress" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="loading" class="text-center d-none">
+          DATA SEDANG DIKIRIM
+        </div>
+        <div id="result" class="text-center d-none">
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
   <header class="header_area white-header">
       <div class="main_menu">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -136,10 +161,10 @@ hr {
   <div class="container">
     <div class="col-lg-9 mx-auto ">
       <div class="panel-body">
-          <form action="connect.php" method="post">
+          <form action="controller/create_person.php" method="post" id="form-bima" enctype="multipart/form-data">
             <div class="form-group">
               <label for="nik">Nomor Induk KTP</label>
-              <input type="text" class="form-control" id="nik" name="nik" />
+              <input type="number" class="form-control" id="nik" name="nik" />
               <div class="invalid-feedback" style="width: 100%;">
               NIK wajib diisi.
               </div>
@@ -161,21 +186,21 @@ hr {
             <div class="row">
           <div class="col-md-1 mb-3">
             <label for="RT">RT</label>
-            <input type="text" class="form-control" id="RT" name="RT" placeholder="" required>
+            <input type="number" class="form-control" id="RT" name="RT" placeholder="" required>
             <div class="invalid-feedback">
               Please select a valid RT.
             </div>
           </div>
           <div class="col-md-1 mb-3">
             <label for="RW">RW</label>
-            <input type="text" class="form-control" id="RW" name="RW" placeholder="" required>
+            <input type="number" class="form-control" id="RW" name="RW" placeholder="" required>
             <div class="invalid-feedback">
               Please provide a valid RW.
             </div>
           </div>
           <div class="col-md-2 mb-3">
             <label for="zip">Kode Pos</label>
-            <input type="text" class="form-control" id="zip" name="zip" placeholder="" required>
+            <input type="number" class="form-control" id="zip" name="zip" placeholder="" required>
             <div class="invalid-feedback">
               Zip code required.
             </div>
@@ -226,21 +251,21 @@ hr {
         <div class="row">
           <div class="col-md-1 mb-3">
             <label for="tgl_lahir">Tanggal</label>
-            <input type="text" class="form-control" id="tgl_lahir" name="tgl_lahir" placeholder="" required>
+            <input type="number" class="form-control" id="tgl_lahir" name="tgl_lahir" placeholder="" required>
             <div class="invalid-feedback">
               Please select a valid tgl.
             </div>
           </div>
           <div class="col-md-1 mb-3">
             <label for="bln_lahir">Bulan</label>
-            <input type="text" class="form-control" id="bln_lahir" name="bln_lahir" placeholder="" required>
+            <input type="number" class="form-control" id="bln_lahir" name="bln_lahir" placeholder="" required>
             <div class="invalid-feedback">
               Please provide a valid bln.
             </div>
           </div>
           <div class="col-md-2 mb-3">
             <label for="thn_lahir">Tahun</label>
-            <input type="text" class="form-control" id="thn_lahir" name="thn_lahir" placeholder="" required>
+            <input type="number" class="form-control" id="thn_lahir" name="thn_lahir" placeholder="" required>
             <div class="invalid-feedback">
               tahun required.
             </div>
@@ -470,14 +495,63 @@ hr {
   </a>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script>
+    $(document).ready(function(ev){
+      $(document).on('submit','#form-bima',function(e){
+        e.preventDefault();
+        // Get form
+        var form = $('#form-bima')[0];
+ 
+       // Create an FormData object 
+        var postData = new FormData(form);
+ 
+        var url = $(this).attr('action');
+        console.log(postData,url);
+        $("#loading").removeClass("d-none");
+        $("#result").addClass("d-none");
+        
+        function generateHtml(data){
+          if(data.type != "success"){
+            return data.html;
+          }
+          var html = data.html + "<br/>Berhasil menambahkan<br/><br/><small>";
+          var submit = data.data;
+          html+= "Nama    : " + submit.nama;
+          html+= "<br/>NIK    : " + submit.nik;
+          html+= "<br/>Email    : " + submit.email;
+          html+= "<br/>NO Hp    : " + submit.noHp;
+          html+="</small>";
+          return html;
+        }
 
-  <!-- Custom scripts for this template -->
-  <script src="js/stylish-portfolio.min.js"></script>
+        $.ajax({
+          type: "POST",
+          url: url,
+          data: postData,
+          dataType: "json",
+          processData: false,
+          contentType: false,
+          success: function (response) {
+            $("#modal-progress").modal("toggle");
+            $("#loading").addClass("d-none");
+            $("#result").removeClass("d-none");
+            Swal.fire({
+              "icon":response.type,
+              "title":response.title,
+              "html":generateHtml(response)
+            });
+          }
+        });
+        
+      })
+    });
+  </script>
+
 
 </body>
 

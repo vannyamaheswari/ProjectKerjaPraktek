@@ -1,0 +1,14 @@
+{
+    "require": {
+        "illuminate/database": "^6.17",
+        "rakit/validation": "^1.2",
+        "illuminate/pagination": "^6.17",
+        "stefangabos/zebra_pagination": "^2.3"
+    },
+    "autoload": {
+        "classmap": [
+            "edustage/models"
+        ]
+
+    }
+}
