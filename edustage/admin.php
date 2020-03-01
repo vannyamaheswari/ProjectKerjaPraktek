@@ -169,7 +169,7 @@ hr {
                     <center><h1>MENU</h1></center>
                     <div class="row">
                       <div class="col-md-4">
-                        <a href="admin_bima_persona.php" class="btn btn-primary btn-block" style="font-size:20pt;padding-top:50px;padding-bottom:50px">Tabel Bima Personal</a>
+                        <a href="admin_bima_person.php" class="btn btn-primary btn-block" style="font-size:20pt;padding-top:50px;padding-bottom:50px">Tabel Bima Personal</a>
                       </div>
 
                       <div class="col-md-4">
