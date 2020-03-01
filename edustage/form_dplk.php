@@ -823,7 +823,7 @@ hr {
               "title":response.title,
               "html":generateHtml(response)
             });
-          }
+          },
         });
         
       })

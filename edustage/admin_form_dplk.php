@@ -2,7 +2,7 @@
 
 define("TYPE_CAPSULE","dplk");
 
-require_once __DIR__."/lib/BardLib.php";
+require_once __DIR__. DIRECTORY_SEPARATOR . "lib" . DIRECTORY_SEPARATOR . "BardLib.php";
 
 authMiddleware();
 ?>

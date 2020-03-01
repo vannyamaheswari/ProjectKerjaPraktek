@@ -1,6 +1,6 @@
 <?php
 define("TYPE_CAPSULE","personal");
-require_once __DIR__."/../lib/BardLib.php";
+require_once __DIR__. DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR . "lib" . DIRECTORY_SEPARATOR . "BardLib.php";
 
 use Rakit\Validation\Validator;
 
@@ -59,7 +59,7 @@ if($validation->fails()){
         echo json_encode([
             'type'=>"danger",
             "title"=>"Error!",
-            "html"=>"Ada kesalahan pada input database atau nik sudah terdaftar!"
+            "html"=>"Ada kesalahan pada input database atau nik sudah terdaftar! e:" . $e->getMessage() 
         ]);
     }
 }
