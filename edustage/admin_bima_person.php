@@ -1,7 +1,7 @@
 <?php
 define("TYPE_CAPSULE","personal");
 
-require_once __DIR__. DIRECTORY_SEPARATOR . "lib" . DIRECTORY_SEPARATOR . "BardLib.php";
+require_once __DIR__."/lib/BardLib.php";
 
 authMiddleware();
 ?>
@@ -267,6 +267,7 @@ $pagination->records_per_page($records_per_page);
                         <td><?php echo $item->pekerjaan?></td>
                         <td>
                             <button class="btn btn-primary" onclick="show('<?php echo $item->nik;?>');">Lihat</button>
+                            <a href="cetak_siswa.php"><button class="btn btn-primary">Print</button></a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
